@@ -8,13 +8,7 @@ public class BoardDTO {
 	private String writer;
 	private String contents;
 	private Timestamp write_date;
-	public BoardDTO(int seq, String writer, String contents, Timestamp write_date) {
-		super();
-		this.seq = seq;
-		this.writer = writer;
-		this.contents = contents;
-		this.write_date = write_date;
-	}
+	private int view_count;
 	public int getSeq() {
 		return seq;
 	}
@@ -39,5 +33,20 @@ public class BoardDTO {
 	public void setWrite_date(Timestamp write_date) {
 		this.write_date = write_date;
 	}
+	public int getView_count() {
+		return view_count;
+	}
+	public void setView_count(int view_count) {
+		this.view_count = view_count;
+	}
+	public BoardDTO(int seq, String writer, String contents, Timestamp write_date, int view_count) {
+		super();
+		this.seq = seq;
+		this.writer = writer;
+		this.contents = contents;
+		this.write_date = write_date;
+		this.view_count = view_count;
+	}
+	
 	
 }
